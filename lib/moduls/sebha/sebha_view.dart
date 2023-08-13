@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class SebhaView extends StatefulWidget {
   static const String routeName = 'sebha_view';
-   SebhaView({super.key});
 
   @override
   State<SebhaView> createState() => _SebhaViewState();
@@ -16,6 +15,8 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuriy = MediaQuery.of(context).size;
+
     return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,8 +30,8 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
             'عدد التسبيحات',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
           ),
-         const  SizedBox(
-            height: 25,
+           SizedBox(
+            height: mediaQuriy.height/33,
           ),
           Container(
             width: 69,
@@ -44,8 +45,8 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
               style:const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             )),
           ),
-         const  SizedBox(
-            height: 20,
+           SizedBox(
+            height: mediaQuriy.height/40,
           ),
           GestureDetector(
             onTap: (){
