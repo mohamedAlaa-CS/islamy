@@ -30,6 +30,8 @@ class _HadethViewState extends State<HadethView> {
         const HadethTitle(),
         Expanded(
           child: ListView.builder(
+            physics:const BouncingScrollPhysics(),
+
             itemBuilder: (context, index) => HadethName(
                 hadethName: hadethTitle[index],
                 hadethTitle: hadethTitle[index],
