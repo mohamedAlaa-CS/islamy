@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HadethTitle extends StatelessWidget {
   const HadethTitle({super.key});
@@ -19,9 +21,9 @@ class HadethTitle extends StatelessWidget {
                 topRight: Radius.circular(60), bottomLeft: Radius.circular(60)),
             color: theme.primaryColor,
           ),
-          child: const Text(
-            'الآحاديث',
-            style: TextStyle(fontSize: 24),
+          child:  Text(
+            AppLocalizations.of(context)!.hadeths,
+            style:const TextStyle(fontSize: 24),
           ),
         ),
       ],

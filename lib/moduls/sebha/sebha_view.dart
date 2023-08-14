@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaView extends StatefulWidget {
   static const String routeName = 'sebha_view';
@@ -26,9 +27,9 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
         const   SizedBox(
             height: 30,
           ),
-          const Text(
-            'عدد التسبيحات',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+           Text(
+            AppLocalizations.of(context)!.tasbehatNumber,
+            style:const TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
           ),
            SizedBox(
             height: mediaQuriy.height/33,

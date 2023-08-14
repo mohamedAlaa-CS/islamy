@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SuraTitle extends StatelessWidget {
 //
@@ -18,8 +19,8 @@ class SuraTitle extends StatelessWidget {
                 topRight: Radius.circular(60), bottomLeft: Radius.circular(60)),
             color: theme.primaryColor,
           ),
-          child: const Text(
-            'اسم السورة',
+          child:  Text(
+            AppLocalizations.of(context)!.suraName,
             style: TextStyle(fontSize: 24),
           ),
         ),
