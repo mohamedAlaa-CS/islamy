@@ -26,14 +26,14 @@ class SouraNameWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             width: 2.0,
-            color: theme.primaryColor,
+            color: theme.canvasColor.withOpacity(0.7),
           )
         ),
         
         child: Text(
           textAlign: TextAlign.center,
           suraName,
-          style: const TextStyle(fontSize: 26),
+          style: theme.textTheme.titleMedium,
         ),
       ),
     );

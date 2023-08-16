@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/models/provider/my_provider.dart';
 import 'package:islami_app/moduls/hadeth/hadeth_view.dart';
 import 'package:islami_app/moduls/quran/quran_view.dart';
 import 'package:islami_app/moduls/radio/radio_view.dart';
 import 'package:islami_app/moduls/sebha/sebha_view.dart';
 import 'package:islami_app/moduls/settings/settings.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
 class HomeLayout extends StatefulWidget {
@@ -28,10 +30,11 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   @override
   Widget build(BuildContext context) {
+    var provider =Provider.of<MyProvider>(context);
     return Container(
-      decoration: const BoxDecoration(
+      decoration:  BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/background_light.png'),
+            image: AssetImage(provider.themeMode == ThemeMode.light?'assets/images/background_light.png': 'assets/images/background_dark.png'),
             fit: BoxFit.fill),
       ),
       child: Scaffold(

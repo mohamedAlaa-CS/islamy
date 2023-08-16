@@ -20,13 +20,13 @@ class HadethName extends StatelessWidget {
           margin:const  EdgeInsets.symmetric(horizontal: 8,vertical: 3),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          border:Border.all(color:theme.primaryColor,
+          border:Border.all(color:theme.canvasColor.withOpacity(0.7),
           width: 2 ),
         ),
         child: Text(
           textAlign: TextAlign.center,
           hadethName,
-          style: const TextStyle(fontSize: 26,)),
+          style: theme.textTheme.titleMedium),
       ),
     );
   }

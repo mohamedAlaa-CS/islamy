@@ -7,5 +7,11 @@
 "hadeth" : "hadeth",
 "sebha" : "Sebha",
 "radio" : "Radio",
-"setting" : "Settings"
+"setting" : "Settings",
+"language" : "Language",
+"mode" : "Mode",
+"light" : "Light",
+"dark" : "Dark",
+"arabic" : "Arabic",
+"english" : "English"
 }

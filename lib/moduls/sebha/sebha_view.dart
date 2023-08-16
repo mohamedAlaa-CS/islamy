@@ -13,23 +13,33 @@ int number = 0;
 int numberList = 0;
 String text = 'سبحان اللّة';
 List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّة اكبر'];
-
+ double angle = 0.0;
   @override
   Widget build(BuildContext context) {
     var mediaQuriy = MediaQuery.of(context).size;
+    var theme = Theme.of(context);
 
     return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset('assets/images/sebha_header_1.png',),
-          Image.asset('assets/images/sebha_header_2.png'),
+          Transform.rotate(
+            angle: angle,
+            child: GestureDetector(
+              onTap: (){
+                 angle ++;
+                 print(angle);
+              },
+              child: Image.asset('assets/images/sebha_header_2.png'),
+            ),
+          ),
         const   SizedBox(
             height: 30,
           ),
            Text(
             AppLocalizations.of(context)!.tasbehatNumber,
-            style:const TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+            style:theme.textTheme.bodySmall,
           ),
            SizedBox(
             height: mediaQuriy.height/33,
@@ -38,12 +48,12 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
             width: 69,
             height: 81,
             decoration: BoxDecoration(
-                color: const Color(0xffB7935F),
+                color: theme.primaryColor,
                 borderRadius: BorderRadius.circular(16)),
             child:  Center(
                 child: Text(
               '$number',
-              style:const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              style:theme.textTheme.titleLarge,
             )),
           ),
            SizedBox(
@@ -74,15 +84,12 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
               width: 137,
               height: 51,
               decoration: BoxDecoration(
-                  color: const Color(0xffB7935F),
+                  color: theme.canvasColor,
                   borderRadius: BorderRadius.circular(16)),
               child:  Center(
                   child: Text(
                 text,
-                style:const TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                style:theme.textTheme.titleSmall,
               )),
             ),
           ),

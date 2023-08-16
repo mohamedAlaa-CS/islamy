@@ -17,11 +17,11 @@ class SuraTitle extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(60), bottomLeft: Radius.circular(60)),
-            color: theme.primaryColor,
+            color: theme.canvasColor.withOpacity(0.85),
           ),
           child:  Text(
             AppLocalizations.of(context)!.suraName,
-            style: TextStyle(fontSize: 24),
+            style: theme.textTheme.titleLarge,
           ),
         ),
       ],
