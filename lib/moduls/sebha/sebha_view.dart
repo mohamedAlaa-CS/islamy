@@ -23,17 +23,34 @@ List<String> tasbeh =['سبحان اللّة', 'الحمد للّة', 'اللّ�
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset('assets/images/sebha_header_1.png',),
-          Transform.rotate(
-            angle: angle,
-            child: GestureDetector(
-              onTap: (){
-                 angle ++;
-                 print(angle);
-              },
-              child: Image.asset('assets/images/sebha_header_2.png'),
+          Center(
+            child: Padding(
+              padding:  EdgeInsets.only(top: mediaQuriy.height/7),
+              child: Stack(
+                clipBehavior:Clip.none ,
+                children: [
+              Positioned(
+                left: 70,
+                bottom: mediaQuriy.height/5.3,
+                child: Image.asset('assets/images/sebha_header_1.png',)),
+              SizedBox(
+                height: mediaQuriy.height/4.5,
+                child: Transform.rotate(
+                  angle: angle,
+                  child: GestureDetector(
+                    onTap: (){
+                       setState(() {
+                         angle --;
+                       });
+                    },
+                    child: Image.asset('assets/images/sebha_header_2.png'),
+                  ),
+                ),
+              ),
+              ],),
             ),
           ),
+
         const   SizedBox(
             height: 30,
           ),
