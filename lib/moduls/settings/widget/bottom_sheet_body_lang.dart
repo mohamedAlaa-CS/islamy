@@ -12,7 +12,6 @@ class BottomSheetBodyLang extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
-    var theme = Theme.of(context);
     return  Padding(
       padding:const  EdgeInsets.only(bottom: 40),
       child: Column(
