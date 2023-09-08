@@ -9,7 +9,6 @@ class SuraDetils extends StatefulWidget {
 
   const SuraDetils({super.key});
 
-
   @override
   State<SuraDetils> createState() => _SuraDetilsState();
 }
@@ -46,7 +45,7 @@ class _SuraDetilsState extends State<SuraDetils> {
           padding: const EdgeInsets.only(top: 30),
           decoration: BoxDecoration(
               color: provider.themeMode == ThemeMode.light
-                  ?const Color(0xffF8F8F8).withOpacity(0.6)
+                  ? const Color(0xffF8F8F8).withOpacity(0.6)
                   : const Color(0xff141A2E),
               borderRadius: BorderRadius.circular(24),
               border: Border.all(
@@ -56,6 +55,7 @@ class _SuraDetilsState extends State<SuraDetils> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
+                textDirection: TextDirection.ltr,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
